@@ -242,3 +242,9 @@ python -m torch.distributed.launch --nproc_per_node=8  evaluate.py \
     --passages  $ATLAS/data/${dataset}-passages.jsonl \
 ```
 
+# Security
+See CONTRIBUTION for more information
+
+
+# Licence
+This project is licensed under the Apache-2.0 License.
