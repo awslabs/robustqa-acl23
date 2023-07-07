@@ -33,10 +33,10 @@ We've included the links to the license for each of the raw datasets. We only di
 ```
 
 ## Raw Data & Annotations
-Due to data license and legal constraints, we could only provide partial final data, and our new annotations without raw data. You can find them in `data/.` All files in this folder are tracked by _[Git LFS](https://git-lfs.com/)_.
+Due to data license and legal constraints, we could only provide partial data, and our new annotations without raw data. You can find them in `data/.` All files in this folder are tracked by _[Git LFS](https://git-lfs.com/)_.
 
 
-For the rest of the data, we provide instructions to download raw data, and process them into uniform data format for RobustQA. In general, after data processing, you can expect to have the following data and field,
+For the rest of the data, we provide instructions to download raw data, and process them into uniform data format for RobustQA. In general, after data processing, you can expect to have the following data and fields,
 
 - `documents.jsonl`: original document pool. Data fields are,
     - `doc_id`: document id
@@ -83,7 +83,7 @@ We only provide detailed data reproduction instruction and code below to avoid a
 
 
 ### SearchQA
-We only provide detailed data reproduction instruction and code below to avoid any potential issues per the following license. So, you will have to acquire the raw data on your own and run the following data processing code.
+We only provide detailed data reproduction instruction and code below to avoid potential issues per the following license. However, we may provide final processed data upon request since the data license doesn't prohibit data distribution.
 - License: https://github.com/nyu-dl/dl4ir-searchQA/blob/master/LICENSE
 - Raw data - `{train|val|test}.zip` can be download from here: https://drive.google.com/drive/u/2/folders/1kBkQGooNyG0h8waaOJpgdGtOnlb1S649
 - `mkdir -p data/searchqa/{train|val|test}`
