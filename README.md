@@ -1,6 +1,6 @@
 # RobustQA-ACL23-Data
 
-This repo describes the details of the RobustQA (ACL'23 Findings) benchmark, which consists of datasets in 8 domains.
+This repo describes the details of the _[RobustQA (ACL'23 Findings)](https://www.amazon.science/publications/robustqa-benchmarking-the-robustness-of-domain-adaptation-for-open-domain-question-answering)_ benchmark, which consists of datasets in 8 domains.
 
 | Domain     | Dataset  | Description | Adapted/Annotated? |
 | :--------- | -------- | ----------- |     :---:          |
@@ -18,8 +18,6 @@ This repo describes the details of the RobustQA (ACL'23 Findings) benchmark, whi
 ## Disclaimers
 We've included the links to the license for each of the raw datasets. We only distribute some of the RobustQA's datasets in a specific format, but we do not vouch for their quality or fairness, or claim that you have license to use the dataset. It remains the user's responsibility to determine whether you as a user have permission to use the dataset under the dataset's license and to cite the right owner of the dataset.
 
-## RobustQA License
-To be added after legal review.
 
 ## Citation
 
