@@ -33,16 +33,10 @@ We've included the links to the license for each of the raw datasets. We only di
 ```
 
 ## Raw Data & Annotations
-Here we provide instructions to download raw data and our annotations, and process them into uniform data format for RobustQA. To download available data, and initialize the directory, simply run the following script. 
-```
-aws s3 sync s3://rujunh-robustness-qa/acl-2023/final_data_public data
-```
+ Due to data license and legal constraints, we could only provide partial 
 
-#### TODO
-Replace `s3://rujunh-robustness-qa/acl-2023/final_data_public` with a public s3 bucket.
+For the rest of the data, we provide instructions to download raw data, and process them into uniform data format for RobustQA. In general, after data processing, you can expect to have the following data and field,
 
-
-Then process raw data into the following files.
 - `documents.jsonl`: original document pool. Data fields are,
     - `doc_id`: document id
     - `title`: document title
@@ -56,14 +50,14 @@ Then process raw data into the following files.
         - `doc_id`: same as above
         - `title`: same as above
         - `text`: same as above
-
-Passage file `passages.jsonl` and aggregated QA file `qrel.jsonl` are needed for the experiments in the paper. 
 - `passages.jsonl`: split document texts in `documents.jsonl` by 100 words (based on white space). Data fields are the same as `document.jsonl` except for
     - `pid = doc_id-k` where k is the k-th split of a document (0-based)
 - `qrel.jsonl`: aggregate all answers per question
     - `qid`:  question id
     - `question`: original question
     - `answers`: aggregated answers across different documents.
+
+Passage file `passages.jsonl` and aggregated QA file `qrel.jsonl` are needed for the experiments in the paper. 
 
 ### SearchQA
 We provide the all processed files as the following license allows data redistribtuion under its copyright notice. In other words, you don't need to run the following data processing code to derive processed data files. We provide the instruciton/code here for your reference.
