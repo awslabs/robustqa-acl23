@@ -33,7 +33,8 @@ We've included the links to the license for each of the raw datasets. We only di
 ```
 
 ## Raw Data & Annotations
- Due to data license and legal constraints, we could only provide partial 
+Due to data license and legal constraints, we could only provide partial final data, and our new annotations without raw data. You can find them in `data/.` All files in this folder are tracked by _[Git LFS](https://git-lfs.com/)_.
+
 
 For the rest of the data, we provide instructions to download raw data, and process them into uniform data format for RobustQA. In general, after data processing, you can expect to have the following data and field,
 
@@ -59,24 +60,6 @@ For the rest of the data, we provide instructions to download raw data, and proc
 
 Passage file `passages.jsonl` and aggregated QA file `qrel.jsonl` are needed for the experiments in the paper. 
 
-### SearchQA
-We provide the all processed files as the following license allows data redistribtuion under its copyright notice. In other words, you don't need to run the following data processing code to derive processed data files. We provide the instruciton/code here for your reference.
-- License: https://github.com/nyu-dl/dl4ir-searchQA/blob/master/LICENSE
-- Raw data - `{train|val|test}.zip` can be download from here: https://drive.google.com/drive/u/2/folders/1kBkQGooNyG0h8waaOJpgdGtOnlb1S649
-- `mkdir -p data/searchqa/{train|val|test}`
-- `mv {train|val|test}.zip data/searchqa/{train|val|test}`
-- `unzip data/searchqa/{train|val|test}.zip`
-- `python code/process_raw.py --dataset searchqa`
-
-### BioASQ
-We only provide detailed data reproduction instruction and code below to avoid any potential issues per the following license. So, you will have to acquire the raw data on your own and run the following data processing code.
-- License: https://creativecommons.org/licenses/by/2.5/
-- Register an account here: http://bioasq.org/
-- download document collecction `allMeSH_2021.zip` and `unzip allMeSH_2021.zip`
-- download the test annotations `{2-9}B{1-5}_golden.json`
-- move both documents and annotations to `data/bioasq/`
-- `python code/process_raw.py --dataset bioasq`
-
 ### FiQA
 - License: There is no data license specfied https://sites.google.com/view/fiqa/home. However, due to Amazon legal requirements, we only deep `doc_id` and `qid` in the published annotation files.
 - Download the raw corpus `FiQA_train_doc_final.tsv` and question file `FiQA_train_question_final.tsv` into `data/fiqa` from https://drive.google.com/file/d/1BlWaV-qVPfpGyJoWQJU9bXQgWCATgxEP/view.
@@ -89,6 +72,24 @@ We only provide detailed data reproduction instruction and code below to avoid a
 - To replicate `documents.jsonl` and `annotations.jsonl`, run `python code/process_raw.py --dataset {lifestyle|recreation|technology|science|writing} --split {test|dev}`
 
 
+### BioASQ
+We only provide detailed data reproduction instruction and code below to avoid any potential issues per the following license. So, you will have to acquire the raw data on your own and run the following data processing code.
+- License: https://creativecommons.org/licenses/by/2.5/
+- Register an account here: http://bioasq.org/
+- download document collecction `allMeSH_2021.zip` and `unzip allMeSH_2021.zip`
+- download the test annotations `{2-9}B{1-5}_golden.json`
+- move both documents and annotations to `data/bioasq/`
+- `python code/process_raw.py --dataset bioasq`
+
+
+### SearchQA
+We only provide detailed data reproduction instruction and code below to avoid any potential issues per the following license. So, you will have to acquire the raw data on your own and run the following data processing code.
+- License: https://github.com/nyu-dl/dl4ir-searchQA/blob/master/LICENSE
+- Raw data - `{train|val|test}.zip` can be download from here: https://drive.google.com/drive/u/2/folders/1kBkQGooNyG0h8waaOJpgdGtOnlb1S649
+- `mkdir -p data/searchqa/{train|val|test}`
+- `mv {train|val|test}.zip data/searchqa/{train|val|test}`
+- `unzip data/searchqa/{train|val|test}.zip`
+- `python code/process_raw.py --dataset searchqa`
 
 
 ## Experiment - Passage Retrieval
