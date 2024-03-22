@@ -33,8 +33,7 @@ We've included the links to the license for each of the raw datasets. We only di
 ```
 
 ## Raw Data & Annotations
-Due to data license and legal constraints, we could only provide partial data, and our new annotations without raw data. You can find them in `data/.` All files in this folder are tracked by _[Git LFS](https://git-lfs.com/)_.
-
+We only provide our new annotations without raw data. You can find them in `data/.` All files in this folder are tracked by _[Git LFS](https://git-lfs.com/)_.
 
 For the rest of the data, we provide instructions to download raw data, and process them into uniform data format for RobustQA. In general, after data processing, you can expect to have the following data and fields,
 
@@ -61,14 +60,14 @@ For the rest of the data, we provide instructions to download raw data, and proc
 Passage file `passages.jsonl` and aggregated QA file `qrel.jsonl` are needed for the experiments in the paper. 
 
 ### FiQA
-- License: There is no data license specfied https://sites.google.com/view/fiqa/home. However, due to Amazon legal requirements, we only deep `doc_id` and `qid` in the published annotation files.
+- License: There is no data license specfied https://sites.google.com/view/fiqa/home. We only deep `doc_id` and `qid` in the published annotation files.
 - Download the raw corpus `FiQA_train_doc_final.tsv` and question file `FiQA_train_question_final.tsv` into `data/fiqa` from https://drive.google.com/file/d/1BlWaV-qVPfpGyJoWQJU9bXQgWCATgxEP/view.
 - To replicate `documents.jsonl` and `annotations.jsonl`, run `python code/process_raw.py --dataset fiqa`
 
 
 ### LoTTE
 - Download raw data here: https://downloads.cs.stanford.edu/nlp/data/colbert/colbertv2/lotte.tar.gz into `data/lotte`. 
-- Annotations: there is no data license specfied https://github.com/stanford-futuredata/ColBERT/blob/main/LoTTE.md. However, due to Amazon legal requirements, we only keep `doc_id` and `qid` in the published annotation files.
+- Annotations: there is no data license specfied https://github.com/stanford-futuredata/ColBERT/blob/main/LoTTE.md. We only keep `doc_id` and `qid` in the published annotation files.
 - To replicate `documents.jsonl` and `annotations.jsonl`, run `python code/process_raw.py --dataset {lifestyle|recreation|technology|science|writing} --split {test|dev}`
 
 
